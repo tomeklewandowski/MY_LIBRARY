@@ -1,0 +1,21 @@
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  color: darkcyan;
+  margin-left: 40px;
+}
+
+.menu {
+    background: #9acfea;
+    text-align: center;
+}
+.item {
+    color: #080808;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: FreeSans;
+;
+}

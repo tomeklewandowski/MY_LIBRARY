@@ -1,0 +1,20 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Book Covers</title>
+<body> 
+  
+    {% for book in book_covers %}
+            <div class="col-md-4"> 
+                    {{ book.name }}
+                    {% if book.book_cover %}
+                     <img src="{{ book.book_cover.url }}"/>
+                    {% else %}
+                    <h2> Something go wrong</h2>
+                    {% endif %}
+            </div> 
+    {% endfor %}
+</body> 
+</html> 

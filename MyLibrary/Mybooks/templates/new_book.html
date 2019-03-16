@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Book:</h2>
+        <ul>
+            <li>Title: {{ book.title }}</li>
+            <li>Author: {{ book.author }}</li>
+            <li>Genre: {{ book.literary_genre }}</li>
+            <li>Isbn: {{ book.isbn }}</li>
+            <li>Publisher: {{ book.publisher }}</li>
+            <li>Synopsis: {{ book.synopsis }}</li>
+            <li>Book cover: {{ book.book_cover }}</li>
+        </ul>
+{% endblock %}
