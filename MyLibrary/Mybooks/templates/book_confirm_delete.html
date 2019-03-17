@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<p>"{{ book.title }}" </p>
+    <p>Do you really want to delete this book?</p>
+<form action ="/book/delete/{{ book.id }}/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Confirm">
+</form>
+{% endblock %}

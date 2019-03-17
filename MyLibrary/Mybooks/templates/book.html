@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Books in library:</h2>
+        <ul>
+            {% for book in books %}
+            <li><a href="{% url 'book-details' book.id %}">{{ book.title }}
+                                                            {{ book.author }}
+                                                            {{ book.get_literary_genre_display }}
+                                                            {{ book.isbn }}
+                                                            {{ book.synopsis }}</a>
+                                                            <img src="{% if book.book_cover %}{{ book.book_cover.url }}{% else %}default.jpg{% endif %}"/></li>
+            <li><a href="{% url 'book-delete' book.pk %}">Delete</a></li>
+            {% endfor %}
+            </ul>
+    {% endblock %}

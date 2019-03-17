@@ -5,9 +5,10 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, logout, login
 from django.contrib.auth.models import User
-from .forms import LoginForm, RegisterForm, AddBookForm
+from .forms import LoginForm, RegisterForm, AddBookForm, BookSearchForm, BookStatusForm
 from django.views import View
-from .models import Book
+from .models import Book, BookStatus
+from django.views.generic import DeleteView
 # from ebooklib import epub
 #
 # book = epub.read_epub('test.epub')
@@ -74,7 +75,7 @@ class AddBookView(LoginRequiredMixin, View):
         return render(request, "addbook.html", {"form": form})
 
     def post(self, request):
-        form = AddBookForm(request.POST)
+        form = AddBookForm(request.POST, request.FILES)
         if form.is_valid():
             title = form.cleaned_data.get('title')
             author = form.cleaned_data.get('author')
@@ -95,6 +96,35 @@ class AddBookView(LoginRequiredMixin, View):
                 return HttpResponse('This book is already here.')
             ctx = {"book": book}
             return render(request, "new_book.html", ctx)
+        else:
+            return render(request, "addbook.html", {"form": form})
+
+
+class BookDetailView(View):
+
+    def get(self, request, book_id):
+        book = Book.objects.get(pk=book_id)
+        ctx = {"book": book}
+        return render(request, "new_book.html", ctx)
+
+
+class BookDelete(DeleteView):
+    model = Book
+    template_name = 'book_confirm_delete.html'
+    success_url = '/'
+
+
+class BookSearchView(View):
+    def get(self, request):
+        form = BookSearchForm()
+        return render(request, "book_search.html", {"form": form})
+
+    def post(self, request):
+        form = BookSearchForm(request.POST)
+        if form.is_valid():
+            search = form.cleaned_data.get('search')
+            books = Book.objects.filter(title__icontains=search)
+            return render(request, "book.html", {"books": books})
 
 
 def book_cover_view(request):
@@ -118,3 +148,18 @@ def display_book_covers(request):
         Books = Book.objects.all()
         return render((request, 'display_book_covers.html',
                        {'book_covers': Books}))
+
+
+class BookStatusView(View):
+    def get(self, request, book_id):
+        book = Book.objects.get(id=book_id)
+        form = BookStatusForm(initial={"Book":  f'{book.title} by {book.author}'})
+        return render(request, "book_status.html", {"form": form, "book":  book})
+
+    def post(self, request, book_id):
+        form = BookStatusForm(request.POST)
+        if form.is_valid():
+            status = form.cleaned_data.get('status')
+            book = Book.objects.get(id=book_id)
+            BookStatus.objects.create(book=book, status=status)
+            return HttpResponse("Success")

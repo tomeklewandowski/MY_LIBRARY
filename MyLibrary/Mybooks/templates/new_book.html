@@ -4,10 +4,10 @@
         <ul>
             <li>Title: {{ book.title }}</li>
             <li>Author: {{ book.author }}</li>
-            <li>Genre: {{ book.literary_genre }}</li>
+            <li>Genre: {{ book.get_literary_genre_display }}</li>
             <li>Isbn: {{ book.isbn }}</li>
             <li>Publisher: {{ book.publisher }}</li>
             <li>Synopsis: {{ book.synopsis }}</li>
-            <li>Book cover: {{ book.book_cover }}</li>
+            <li>Book cover:  <img src="{% if book.book_cover %}{{ book.book_cover.url }}{% else %}default.jpg{% endif %}"/></li></li>
         </ul>
 {% endblock %}

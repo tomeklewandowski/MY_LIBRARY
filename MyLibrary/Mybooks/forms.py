@@ -1,8 +1,7 @@
 from django import forms
 from django.core.validators import EmailValidator
-from. models import Book
+from .models import Book, BookStatus, BookRate, BookComments
 from django.forms import ModelForm
-from .models import genre_lit
 
 
 class LoginForm (forms.Form):
@@ -34,19 +33,36 @@ class RegisterForm(forms.Form):
                 "password and password_again does not match")
 
 
-# class AddBookForm(forms.Form):
-#     title = forms.CharField(max_length=50, strip=True, label="Enter title")
-#     author = forms.CharField(max_length=50)
-#     literary_genre = forms.ChoiceField(label="Genre", initial='', widget=forms.Select(), required=True, choices=genre_lit)
-#     isbn = forms.CharField(max_length=17)
-#     publisher = forms.CharField(max_length=200)
-#     synopsis = forms.CharField(max_length=9000)
-
 class AddBookForm(forms.ModelForm):
 
     class Meta:
         model = Book
         fields = ['title', 'author', 'literary_genre', 'isbn', 'publisher', 'synopsis', 'book_cover']
+
+
+class BookSearchForm(forms.Form):
+    search = forms.CharField(max_length=100, strip=True, label="Search", help_text="Title needed")
+
+
+class BookStatusForm(forms.Form):
+
+    class Meta:
+        model = BookStatus
+        fields = '__all__'
+
+
+class BookRateForm(forms.Form):
+
+    class Meta:
+        model = BookRate
+        fields = '__all__'
+
+
+class BookCommentsForm(forms.Form):
+
+    class Meta:
+        model = BookComments
+        fields = '__all__'
 
 
 

@@ -1,15 +1,10 @@
 from django.contrib import admin
-from .models import Rate, Comments, Review, Author, Book
+from .models import BookRate, Review, Author, Book, BookComments
 
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     pass
-
-
-# @admin.register(User)
-# class UserAdmin(admin.ModelAdmin):
-#     pass
 
 
 @admin.register(Author)
@@ -22,12 +17,12 @@ class ReviewAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Comments)
-class CommentsAdmin(admin.ModelAdmin):
+@admin.register(BookComments)
+class BookCommentsAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Rate)
-class RateAdmin(admin.ModelAdmin):
+@admin.register(BookRate)
+class BookRateAdmin(admin.ModelAdmin):
     pass
 
