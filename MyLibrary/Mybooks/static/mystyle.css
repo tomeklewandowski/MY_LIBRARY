@@ -1,12 +1,12 @@
 body {
-  background-color: aliceblue;
+  background-color: mintcream;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
 }
 
 h1 {
-  color: darkslategray;
+  color: #0b0b0b;
     font-weight: bolder;
   margin-left: 40px;
     font-size: 40px;
@@ -34,4 +34,36 @@ h1 {
     font-weight: bold;
     font-size: medium;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a:link {
+
+color: #1b1e21;
+
+}
+
+
+a:visited {
+
+    color: black;
+
+}
+
+
+a:hover {
+
+    color: #0066cc;
+
+}
+
+
+a:active {
+
+ color: #0b0b0b;
+
+}
+
+.navbar-fixed-top{
+    width:1200px;
+    left:20%;
 }

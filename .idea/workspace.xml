@@ -2,38 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c9716bf-8917-4800-84f3-613737eb115c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/importer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/static/css/background.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/static/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/static/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/book_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/book_rate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/editbook.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/my_books_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/MyLibrary/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/MyLibrary/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/MyLibrary/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/MyLibrary/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/0002_auto_20190307_1944.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/0003_auto_20190312_1723.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/0004_book_book_cover.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/0005_auto_20190317_0819.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/0006_auto_20190317_0910.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/0007_auto_20190317_0952.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/0008_auto_20190317_1030.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/context_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/images/book_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/images/book_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/images/hero_bg_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/images/person_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/images/person_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/images/person_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/about-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/b1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/b2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/b3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/b4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/b5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/b6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/c1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/c2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/c3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/disabled-check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/disabled-radio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/f1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/f2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/f3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/f4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/f5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/f6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/f7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/f8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/g1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/g2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/g3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/g4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/g5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/g6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/g7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/g8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/primary-check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/primary-radio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/success-check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/elements/success-radio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/f1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/f2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/fact-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/header-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/header-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/p1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/p2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/p3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/p4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/p5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/p6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/signature.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/t1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/t2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/t3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/img/user.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/static/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/static/mystyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/add_cover_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/add_cover_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/addbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/addbook.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/book_status.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/book_status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/new_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/templates/new_book.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyLibrary/Mybooks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLibrary/Mybooks/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +95,7 @@
     <session id="246720512">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.32" value="2" />
@@ -75,37 +103,41 @@
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.48" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.63" value="1" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="9" />
-          <entry key="html" value="64" />
-          <entry key="py" value="35" />
+          <entry key="css" value="10" />
+          <entry key="html" value="65" />
+          <entry key="jpg" value="6" />
+          <entry key="png" value="2" />
+          <entry key="py" value="37" />
           <entry key="scss" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="9" />
-          <entry key="HTML" value="64" />
-          <entry key="Python" value="35" />
+          <entry key="CSS" value="10" />
+          <entry key="HTML" value="65" />
+          <entry key="Image" value="8" />
+          <entry key="Python" value="37" />
           <entry key="SCSS" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="378" />
-          <entry key="html" value="2858" />
-          <entry key="py" value="3834" />
+          <entry key="css" value="426" />
+          <entry key="html" value="3121" />
+          <entry key="py" value="3865" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="378" />
-          <entry key="HTML" value="2858" />
-          <entry key="Python" value="3834" />
+          <entry key="CSS" value="426" />
+          <entry key="HTML" value="3121" />
+          <entry key="Python" value="3865" />
         </counts>
       </usages-collector>
     </session>
@@ -113,58 +145,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/new_book.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/book.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/mystyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-              <folding>
-                <element signature="e#1871#1877#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/addbook.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/add_cover_book.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="324">
+              <caret line="12" selection-start-line="11" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -172,8 +156,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyLibrary/MyLibrary/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
+            <state relative-caret-position="1863">
               <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/mystyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -183,6 +176,39 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
               <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="128" selection-start-line="121" selection-end-line="128" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-72">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,18 +269,18 @@
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/models.py" />
         <option value="$PROJECT_DIR$/MyLibrary/MyLibrary/urls.py" />
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/templates/editbook.html" />
-        <option value="$PROJECT_DIR$/MyLibrary/Mybooks/views.py" />
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/templates/context_processor.py" />
-        <option value="$PROJECT_DIR$/MyLibrary/Mybooks/forms.py" />
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/templates/my_books_list.html" />
-        <option value="$PROJECT_DIR$/MyLibrary/Mybooks/static/mystyle.css" />
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/context_processor.py" />
         <option value="$PROJECT_DIR$/MyLibrary/MyLibrary/settings.py" />
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/templates/add_cover_book.html" />
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/templates/new_book.html" />
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/static/css/background.css" />
-        <option value="$PROJECT_DIR$/MyLibrary/Mybooks/templates/base.html" />
         <option value="$PROJECT_DIR$/MyLibrary/Mybooks/templates/addbook.html" />
+        <option value="$PROJECT_DIR$/MyLibrary/Mybooks/forms.py" />
+        <option value="$PROJECT_DIR$/MyLibrary/Mybooks/views.py" />
+        <option value="$PROJECT_DIR$/MyLibrary/Mybooks/static/mystyle.css" />
+        <option value="$PROJECT_DIR$/MyLibrary/Mybooks/templates/base.html" />
       </list>
     </option>
   </component>
@@ -275,6 +301,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -359,7 +386,7 @@
               <item name="MyLibrary" type="462c0819:PsiDirectoryNode" />
               <item name="Mybooks" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MY_LIBRARY" type="b2602c69:ProjectViewProjectNode" />
@@ -403,7 +430,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -473,7 +499,7 @@
     <frame x="55" y="27" width="1545" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27084723" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2748499" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -535,25 +561,9 @@
         <state relative-caret-position="-2025" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/context_processor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/context_processor.py" />
     <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/serializers.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/models.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -565,34 +575,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyLibrary/MyLibrary/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="33" column="72" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/book_confirm_delete.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -676,17 +667,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/MyLibrary/settings.py">
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/new_book.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
+        <state relative-caret-position="135">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/mystyle.css">
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/book.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        <state relative-caret-position="432">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/addbook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/MyLibrary/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1863">
+          <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -700,20 +705,6 @@
     <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/display_book_covers.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/new_book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/css/background.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -721,27 +712,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/images/book_white.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/images/book_black.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/images/person_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/images/person_2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/img/about-img.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/img/b1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/img/b3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/img/header-bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/add_cover_book.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        <state relative-caret-position="324">
+          <caret line="12" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
           <folding>
-            <element signature="e#1871#1877#0#HTML" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/addbook.html">
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state relative-caret-position="511">
+          <caret line="128" selection-start-line="121" selection-end-line="128" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/add_cover_book.html">
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/static/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        <state relative-caret-position="549">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLibrary/Mybooks/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
         </state>
       </provider>
     </entry>

@@ -118,7 +118,7 @@ class BookDelete(DeleteView):
 
 class BookSearchView(View):
     def get(self, request):
-        form = BookSearchForm()
+        form = BookSearchForm(request.GET)
         return render(request, "book_search.html", {"form": form})
 
     def post(self, request):

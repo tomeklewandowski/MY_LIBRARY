@@ -9,31 +9,36 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/background.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'mystyle.css' %}">
 </head>
-    <body><div>
-        <h1><a href="/">My Library</a></h1>
-                {% if user.is_authenticated %}
-                     <header>
-        <nav class="navbar navbar-dark bg-info mb-5">
+    <body>
+    <header>
+        <nav class="navbar navbar-static-top navbar-dark bg-dark ml-0 bg-secondary mb-3" >
             <a href="{% url 'addbook' %}" class="navbar-brand active ml-auto">Add book</a>
             <a href="{% url 'book-list' %}" class="navbar-brand ml-3">List of all books</a>
             <a href="{% url 'my-books' %}" class="navbar-brand ml-3">List of my books</a>
-            <a href="{% url 'book-search' %}" class="navbar-brand  ml-3 mr-auto">Search book</a>
+            <form action="{% url 'book-search' %}" method="get" class="form-inline">
+                <button class="btn btn-light" type="submit">Search book</button></form>
             <a href="{% url 'logout' %}" class="navbar-brand  ml-3 mr-auto">Logout</a>
         </nav>
     </header>
+        <h1><a href="/">My Library</a></h1>
+    <blockquote class="blockquote">
+  <p class="mb-0">"A to miej na pilnej pieczy, abyś czytał, kiedy tylko możesz."</p>
+  <footer class="blockquote-footer">Mikołaj Rej <cite title="Source Title">Do tego co czytał (1562)</cite></footer>
+</blockquote>
+                {% if user.is_authenticated %}
                     <div class="item"><b>Welcome: {{ logged }}</b></div>
         {% else %} <ul class="nav-tabs-justified">
-  <li class="nav-item">
+  <li class="col-sm6 md-5 offset-1">
     <a class="nav-link active" href="/register">Registration</a>
   </li>
-  <li class="nav-item">
+  <li class="col-sm6 md-5 offset-1">
     <a class="nav-link active" href="/login">Login</a>
   </li>
                 </ul>
         {% endif %}
         <div>
         {% if user.is_superuser %}
-    <li class="nav-item">
+    <li class="col-sm6 md-5 offset-1">
     <a class="nav-link" href="/mass_import">Import epub</a>
   </li>
 {% endif %}
