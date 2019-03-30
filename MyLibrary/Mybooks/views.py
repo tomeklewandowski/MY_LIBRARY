@@ -1,17 +1,14 @@
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import IntegrityError
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, logout, login
 from django.contrib.auth.models import User
-from .forms import LoginForm, RegisterForm, AddBookForm, BookSearchForm, BookStatusForm
+from .forms import LoginForm, RegisterForm, AddBookForm, BookSearchForm, BookStatusForm, BookRateForm
 from django.views import View
-from .models import Book, BookStatus
+from .models import Book, BookStatus, BookRate
 from django.views.generic import DeleteView
-# from ebooklib import epub
-#
-# book = epub.read_epub('test.epub')
+from . import importer
 
 
 class MainView(View):
@@ -33,15 +30,14 @@ class LoginView(View):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('/')
-                #return HttpResponse(f'Welcome {username}')
+                return render(request, 'info.html', {'text': 'Congratulations. You are logged in.', 'url': '/'})
             else:
-                return HttpResponse("Ups, You are not log in.")
+                return render(request, 'info.html', {'text': 'Sorry. Login failed.', 'url': '/login'})
 
 
 def logout_view(request):
     logout(request)
-    return redirect('/')
+    return render(request, 'info.html', {'text': 'You are logged out.', 'url': '/'})
 
 
 class RegisterView(View):
@@ -62,11 +58,6 @@ class RegisterView(View):
             user.save()
             ctx = {"user": user}
             return render(request, "new_user.html", ctx)
-
-
-class MassAddBookView(LoginRequiredMixin, View):
-    def get(self, request):
-        return HttpResponse('ha')
 
 
 class AddBookView(LoginRequiredMixin, View):
@@ -104,7 +95,18 @@ class BookDetailView(View):
 
     def get(self, request, book_id):
         book = Book.objects.get(pk=book_id)
-        ctx = {"book": book}
+        query = BookStatus.objects.filter(user=request.user).filter(book=book)
+        if query.exists():
+            status = query.first()
+        else:
+            status = ''
+        query = BookRate.objects.filter(book=book)
+        if query.exists():
+            rate = query.all()
+            rate_list = list(rate)
+        else:
+            rate_list = []
+        ctx = {"book": book, "status": status, "rates": rate_list}
         return render(request, "new_book.html", ctx)
 
 
@@ -130,7 +132,6 @@ class BookSearchView(View):
 def book_cover_view(request):
     if request.method == 'POST':
         form = AddBookForm(request.POST, request.FILES)
-
         if form.is_valid():
             form.save()
             return redirect('success')
@@ -146,20 +147,86 @@ def success(request):
 def display_book_covers(request):
     if request.method == 'GET':
         Books = Book.objects.all()
-        return render((request, 'display_book_covers.html',
-                       {'book_covers': Books}))
+        return render(request, 'display_book_covers.html',
+                       {'book_covers': Books})
 
 
-class BookStatusView(View):
+class BookStatusView(LoginRequiredMixin, View):
     def get(self, request, book_id):
         book = Book.objects.get(id=book_id)
-        form = BookStatusForm(initial={"Book":  f'{book.title} by {book.author}'})
+        form = BookStatusForm()
         return render(request, "book_status.html", {"form": form, "book":  book})
 
     def post(self, request, book_id):
         form = BookStatusForm(request.POST)
         if form.is_valid():
-            status = form.cleaned_data.get('status')
             book = Book.objects.get(id=book_id)
-            BookStatus.objects.create(book=book, status=status)
-            return HttpResponse("Success")
+            user = request.user
+            query = BookStatus.objects.filter(user=user).filter(book=book)
+            status = form.cleaned_data.get('status')
+            if query.exists():
+                query.update(status=status)
+            else:
+                BookStatus.objects.create(status=status, book=book, user=user)
+            return redirect("/book/"+str(book_id))
+
+
+class BookRateView(LoginRequiredMixin, View):
+    def get(self, request, book_id):
+        book = Book.objects.get(id=book_id)
+        form = BookRateForm()
+        return render(request, "book_rate.html", {"form": form, "book":  book})
+
+    def post(self, request, book_id):
+        form = BookRateForm(request.POST)
+        if form.is_valid():
+            book = Book.objects.get(id=book_id)
+            user = request.user
+            query = BookRate.objects.filter(user=user).filter(book=book)
+            rate = form.cleaned_data.get('rate')
+            comment = form.cleaned_data.get('comment')
+            if query.exists():
+                query.update(rate=rate, comment=comment)
+            else:
+                BookRate.objects.create(rate=rate, comment=comment, book=book, user=user)
+            return redirect("/book/" + str(book_id))
+
+
+class BookListView(LoginRequiredMixin, View):
+    def get(self, request):
+        books = Book.objects.all()
+        return render(request, "book_list.html", {"books": books})
+
+
+class MyBookListView(LoginRequiredMixin, View):
+    def get(self, request):
+        user = request.user
+        my_books = BookStatus.objects.filter(user=user)
+        return render(request, "my_books_list.html", {"books": my_books})
+
+
+class MassBookImport(LoginRequiredMixin, View):
+    def get(self, request):
+        importer.epub_import('/home/tomek/Dokumenty/TL_ebook/klasyka500')
+        return render(request, 'info.html', {'text': 'Congratulations. Import done.', 'url': '/'})
+
+
+class EditBookView(LoginRequiredMixin, View):
+    def get(self, request, book_id):
+        form = AddBookForm(instance=Book.objects.get(id=book_id))
+        return render(request, "editbook.html", {"form": form, "book_id": book_id})
+
+    def post(self, request, book_id):
+        form = AddBookForm(request.POST, request.FILES, instance=Book.objects.get(id=book_id))
+        if form.is_valid():
+            try:
+                form.save()
+            except IntegrityError:
+                return HttpResponse('This book is already here.')
+            return redirect("/book/"+str(book_id))
+        else:
+            return render(request, "addbook.html", {"form": form})
+
+
+
+

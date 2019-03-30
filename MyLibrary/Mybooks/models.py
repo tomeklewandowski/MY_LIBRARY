@@ -1,8 +1,10 @@
+from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import User
 
 
 genre_lit = (
+    (0, "Unknown"),
     (1, "Fantasy"),
     (2, "Westerns"),
     (3, "Romance"),
@@ -16,14 +18,14 @@ genre_lit = (
 )
 
 genre_rate = (
-    ("1", "No way"),
-    ("2", "Weak"),
-    ("3", "Nearly"),
-    ("4", "Interesting"),
-    ("5", "Good"),
-    ("6", "Very good"),
-    ("7", "I can't tear myself away"),
-    ("8", "Masterpiece"),
+    (1, "No way"),
+    (2, "Weak"),
+    (3, "Nearly"),
+    (4, "Interesting"),
+    (5, "Good"),
+    (6, "Very good"),
+    (7, "I can't tear myself away"),
+    (8, "Masterpiece"),
 )
 
 book_stat = (
@@ -34,14 +36,13 @@ book_stat = (
 
 
 class Book(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=100)
     author = models.CharField(max_length=50)
-    literary_genre = models.SmallIntegerField(choices=genre_lit, default=None)
-    isbn = models.CharField(max_length=17, unique=True)
-    publisher = models.CharField(max_length=200)
-    synopsis = models.CharField(max_length=9000, default=None)
+    literary_genre = models.SmallIntegerField(choices=genre_lit, default=0)
+    isbn = models.CharField(max_length=100, unique=True)
+    publisher = models.CharField(max_length=200, null=True)
+    synopsis = models.CharField(max_length=9000, null=True)
     book_cover = models.ImageField(upload_to='media/covers/', null=True)
-    rate = models.ManyToManyField(User, through="BookRate")
 
     @property
     def name(self):
@@ -51,46 +52,15 @@ class Book(models.Model):
         return self.title
 
 
-# class User(models.Model):
-#     first_name = models.CharField(max_length=64)
-#     last_name = models.CharField(max_length=64)
-#     email = models.EmailField(unique=True)
-#     user_name = models.CharField(max_length=30, unique=True)
-#
-#     @property
-#     def name(self):
-#         return "{}".format(self.user_name)
-#
-#     def __str__(self):
-#         return self.user_name
-
-
-class Author(models.Model):
-    first_name = models.CharField(max_length=64)
-    last_name = models.CharField(max_length=64)
-    own_books = models.ManyToManyField(Book, related_name="book")
-
-
-class Review(models.Model):
-    content = models.TextField(max_length=5000)
-    creation_date = models.DateTimeField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-
-
-class BookComments(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    book = models.ForeignKey(Book, on_delete=models.CASCADE, null=True)
-    comment = models.CharField(max_length=2000, null=True)
-
-
 class BookRate(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rate = models.FloatField(choices=genre_rate, default=None)
+    comment = models.TextField(max_length=5000, default=None)
+    creation_date = models.DateTimeField(default=timezone.now)
 
 
 class BookStatus(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     status = models.SmallIntegerField(choices=book_stat, default=None)
-

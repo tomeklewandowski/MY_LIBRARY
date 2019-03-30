@@ -1,21 +1,37 @@
 body {
   background-color: aliceblue;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 h1 {
-  color: darkcyan;
+  color: darkslategray;
+    font-weight: bolder;
   margin-left: 40px;
+    font-size: 40px;
 }
 
 .menu {
-    background: #9acfea;
+    background: #0f192a;
     text-align: center;
 }
 .item {
-    color: #080808;
+    color: #0f192a;
     padding: 20px;
     font-weight: bold;
     font-size: 18px;
     font-family: FreeSans;
-;
+}
+.text_bloc {
+    color: maroon;
+    background: #4a8cdb;
+    font-weight: bold;
+}
+
+.menu_book {
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

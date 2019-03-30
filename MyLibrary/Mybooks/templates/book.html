@@ -7,7 +7,9 @@
                                                             {{ book.author }}
                                                             {{ book.get_literary_genre_display }}
                                                             {{ book.isbn }}
-                                                            {{ book.synopsis }}</a>
+                                                            {{ book.synopsis }}
+                                                            {{ book.status }}
+                                                            {{ book.rate }}</a>
                                                             <img src="{% if book.book_cover %}{{ book.book_cover.url }}{% else %}default.jpg{% endif %}"/></li>
             <li><a href="{% url 'book-delete' book.pk %}">Delete</a></li>
             {% endfor %}

@@ -1,3 +1,4 @@
+pyepub
 decorator
 Django
 django-extensions

@@ -1,13 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Book:</h2>
-        <ul>
-            <li>Title: {{ book.title }}</li>
-            <li>Author: {{ book.author }}</li>
-            <li>Genre: {{ book.get_literary_genre_display }}</li>
-            <li>Isbn: {{ book.isbn }}</li>
-            <li>Publisher: {{ book.publisher }}</li>
-            <li>Synopsis: {{ book.synopsis }}</li>
-            <li>Book cover:  <img src="{% if book.book_cover %}{{ book.book_cover.url }}{% else %}default.jpg{% endif %}"/></li></li>
+<h2>Book: </h2>
+            <ul>
+            <li><div class="menu_book">Title: </div> "{{ book.title }}"</li>
+            <li><div class="menu_book">Author: </div>{{ book.author }}</li>
+            <li><div class="menu_book">Genre: </div>{{ book.get_literary_genre_display }}</li>
+            <li><div class="menu_book">Isbn: </div>{{ book.isbn }}</li>
+            <li><div class="menu_book">Publisher: </div>{{ book.publisher }}</li>
+            <li><div class="menu_book">Synopsis: </div>{{ book.synopsis }}</li>
+            <li><div class="menu_book">Status: </div>
+            <a href="{% url 'book-status' book.pk %}">{% if status.status %}{{ status.get_status_display }}{% else %}Add status{% endif %}</a>
+                </li>
+            <li><div class="menu_book">Opinions: </div>
+                <a href="{% url 'book-rate' book.pk %}">Add opinion</a>
+                {% for rate in rates %}<div class="text_bloc">{{ rate.get_rate_display }}</div>Comment:<div>{{rate.comment }}</div>User:<div>{{ rate.user }}</div>{% endfor %}</li>
+            <li><div class="menu_book">Book cover: </div><img src="{% if book.book_cover %}{{ book.book_cover.url }}{% else %}default.jpg{% endif %}"/></li>
+         <li>
+            <a href="{% url 'book-edit' book.pk %}">Edit</a>
+                </li>
         </ul>
 {% endblock %}

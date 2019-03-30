@@ -1,0 +1,18 @@
+body {
+  width: 1000px;
+  height: 1000px;
+  display: run-in;
+  position: center;
+}
+
+body::after {
+  content: "";
+  background: url("/static/backgroundimage2.jpg") 100% center no-repeat;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}

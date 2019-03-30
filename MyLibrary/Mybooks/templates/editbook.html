@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <center><h2>Edit book:</h2></center>
+    <center><form action="{% url 'book-edit' book_id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="OK"/>
+    </form>
+        {% endblock %}

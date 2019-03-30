@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Book status: {{book.title}}</h2>
+<h2>Book status: "{{ book.title }}"</h2>
 <form action="{% url 'book-status' book.id %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}

@@ -1,7 +1,6 @@
 from django import forms
 from django.core.validators import EmailValidator
-from .models import Book, BookStatus, BookRate, BookComments
-from django.forms import ModelForm
+from .models import Book, BookStatus, BookRate
 
 
 class LoginForm (forms.Form):
@@ -44,25 +43,24 @@ class BookSearchForm(forms.Form):
     search = forms.CharField(max_length=100, strip=True, label="Search", help_text="Title needed")
 
 
-class BookStatusForm(forms.Form):
+class BookStatusForm(forms.ModelForm):
 
     class Meta:
         model = BookStatus
-        fields = '__all__'
+        fields = ['status']
 
 
-class BookRateForm(forms.Form):
+class BookRateForm(forms.ModelForm):
 
     class Meta:
         model = BookRate
-        fields = '__all__'
+        fields = ['rate', 'comment']
 
 
-class BookCommentsForm(forms.Form):
 
-    class Meta:
-        model = BookComments
-        fields = '__all__'
+
+
+
 
 
 

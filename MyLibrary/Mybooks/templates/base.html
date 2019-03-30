@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head><meta charset="utf-8"/>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static "mystyle.css" %}"></head>
-        <h1>My Library</h1>
-        {% if user.is_authenticated %}
-    <div class="menu">
-        <span class="item"><a href="/logout">Logout</a></span>
-        <span class="item"><a href="/addbook">Add book</a></span>
-        </div>
-        {% else %}
-        <a href="/login"><h2>Login</h2></a>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-theme.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-grid.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-reboot.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/background.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'mystyle.css' %}">
+</head>
+    <body><div>
+        <h1><a href="/">My Library</a></h1>
+                {% if user.is_authenticated %}
+                     <header>
+        <nav class="navbar navbar-dark bg-info mb-5">
+            <a href="{% url 'addbook' %}" class="navbar-brand active ml-auto">Add book</a>
+            <a href="{% url 'book-list' %}" class="navbar-brand ml-3">List of all books</a>
+            <a href="{% url 'my-books' %}" class="navbar-brand ml-3">List of my books</a>
+            <a href="{% url 'book-search' %}" class="navbar-brand  ml-3 mr-auto">Search book</a>
+            <a href="{% url 'logout' %}" class="navbar-brand  ml-3 mr-auto">Logout</a>
+        </nav>
+    </header>
+                    <div class="item"><b>Welcome: {{ logged }}</b></div>
+        {% else %} <ul class="nav-tabs-justified">
+  <li class="nav-item">
+    <a class="nav-link active" href="/register">Registration</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/login">Login</a>
+  </li>
+                </ul>
         {% endif %}
-
+        <div>
+        {% if user.is_superuser %}
+    <li class="nav-item">
+    <a class="nav-link" href="/mass_import">Import epub</a>
+  </li>
+{% endif %}
         {% block content %}
-        <a href="/register"><h2>Registration</h2></a>
     {% endblock %}
-    <img src="{% static "main.jpeg" %}">
+    </div>
+    </br>
+    <footer class="container-fluid" id="footer">
+        <p>
+           &copy;
+           {% now 'Y' %},
+           Tomasz Lewandowski <br>
+           All rights reserved
+        </p>
+</footer>
+        </div>
     </body>
 </html>
